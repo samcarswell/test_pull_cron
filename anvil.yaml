@@ -1,8 +1,9 @@
-allow_embedding: false
-package_name: test_github_action
-db_schema: []
-name: test_github_action
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-full}
 services: []
+package_name: test_github_action
+allow_embedding: false
+name: test_github_action
+runtime_options: {version: 2, client_version: '3', server_version: python3-full}
+metadata: {}
+startup_form: Form1
+db_schema: []
+renamed: true
