@@ -15,7 +15,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         git clone git@github.com:samcarswell/husky_downstream folder
-        git remote add husky ssh://${{secrets.HUSKY_REPO_PATH}}
+        git remote add husky ${{secrets.HUSKY_REPO_PATH}}
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name "samcarswell"
         git checkout -b husky || git checkout husky
