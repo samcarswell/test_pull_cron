@@ -10,7 +10,7 @@ jobs:
       with:
          key: ${{ secrets.PRIVATE_SSH_KEY }}
          name: id_rsa # optional
-         #known_hosts: ${{ secrets.HUSKY_HOST_KEY }}
+         known_hosts: ${{ secrets.HUSKY_HOST_KEY }}
     - name: Fetch, pull and merge from Husky
       run: |
         cd $GITHUB_WORKSPACE
