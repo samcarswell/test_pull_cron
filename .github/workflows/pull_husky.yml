@@ -32,6 +32,7 @@ jobs:
       - name: Fetch, pull and merge from Husky
         run: |
           cd $GITHUB_WORKSPACE
+          git pull git@github.com:samcarswell/husky_downstream folder
           git remote add husky ssh://${{secrets.HUSKY_REPO_PATH}}
           git checkout -b husky || git checkout husky
           git fetch husky master
