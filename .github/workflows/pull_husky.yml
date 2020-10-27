@@ -22,7 +22,8 @@ jobs:
       
       - name: Create SSH keys
         run: |
-          mkdir -p ~/.ssh
+          cd ~
+          mkdir .ssh
           echo ${{secrets.HUSKY_HOST_KEY}} >> ~/.ssh/known_hosts
           echo ${{secrets.PRIVATE_SSH_KEY}} >> ~/.ssh/id_rsa
           
