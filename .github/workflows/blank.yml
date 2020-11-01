@@ -9,7 +9,7 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
          key: ${{ secrets.PRIVATE_SSH_KEY }}
-         known_hosts: ${{ secrets.HUSKY_HOST_KEY }}
+         known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - name: Fetch, pull and merge from Husky
       run: |
         cd $GITHUB_WORKSPACE
