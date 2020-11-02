@@ -16,4 +16,10 @@ jobs:
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name "samcarswell"
         git clone ${{secrets.HUSKY_REPO_PATH}} test2
-        ls -la test2
+        cd test2
+        HUSKY_WORKSPACE=$(pwd)
+        git remote add github $GITHUB_WORKSPACE
+        git checkout -b github || git checkout github
+        git fetch github master
+        git pull github master
+        git push origin master
