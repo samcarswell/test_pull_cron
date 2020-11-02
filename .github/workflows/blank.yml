@@ -13,9 +13,7 @@ jobs:
     - name: Fetch, pull and merge from Husky
       run: |
         cd $GITHUB_WORKSPACE
-        ls -la ~/.ssh
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name "samcarswell"
-        ssh-keyscan husky.mdu.unimelb.edu.au
         git clone ${{secrets.HUSKY_REPO_PATH}} test2
-# # # # # # #
+        ls -la test2
