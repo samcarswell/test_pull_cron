@@ -19,8 +19,10 @@ jobs:
         cd test2
         HUSKY_WORKSPACE=$(pwd)
         git remote add github $GITHUB_WORKSPACE
-        git checkout -b github || git checkout github
+        git checkout -b github_branch || git checkout github_branch
         git fetch github master
         git pull github master --no-edit
+        git checkout master
+        git merge github_branch --no-edit
         git push origin master
 #
