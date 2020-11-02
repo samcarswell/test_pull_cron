@@ -21,12 +21,8 @@ jobs:
         git clone ${{secrets.HUSKY_REPO_PATH}} test2
         cd test2
         HUSKY_WORKSPACE=$(pwd)
-        git remote add github git@github.com:samcarswell/test_pull_cron.git
-        git remote -v
-        git checkout -b github_branch || git checkout github_branch
+        git remote add github $GITHUB_WORKSPACE
         git fetch github master
         git pull github master --no-edit
-        git checkout master
-        git merge github_branch --no-edit
         git push origin master
 #
