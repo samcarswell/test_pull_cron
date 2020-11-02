@@ -21,6 +21,6 @@ jobs:
         git remote add github $GITHUB_WORKSPACE
         git checkout -b github || git checkout github
         git fetch github master
-        git pull github master
+        git pull github master --no-edit
         git push origin master
 #
